@@ -1,16 +1,12 @@
 - title: Getting Started
   docs:
   - home
-  - quickstart
   - installation
-  - usage
-  - structure
-  - configuration
 
-- title: Your Content
+- title: Admin Guide
   docs:
-  - frontmatter
-  - posts
+  - companystructure
+  - jobdetails
   - drafts
   - pages
   - variables

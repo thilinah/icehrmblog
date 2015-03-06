@@ -1,107 +1,39 @@
 ---
 layout: docs
 title: Installation
-prev_section: quickstart
-next_section: usage
+prev_section: home
+next_section: companystructure
 permalink: /docs/installation/
 ---
 
-Getting Jekyll installed and ready-to-go should only take a few minutes. If it
-ever becomes a pain in the ass, please [file an
-issue]({{ site.repository }}/issues/new) (or submit a pull request)
+Getting IceHrm installed only take a few minutes. If it
+ever becomes a problem, please [file a issue](https://github.com/thilinah/icehrm/issues/new)
 describing the issue you encountered and how we might make the process easier.
 
 ### Requirements
 
-Installing Jekyll is easy and straight-forward, but there are a few requirements
+Before installing IceHrm please make sure your system supports following requirements
 you’ll need to make sure your system has before you start.
 
-- [Ruby](http://www.ruby-lang.org/en/downloads/) (including development
-  headers)
-- [RubyGems](http://rubygems.org/pages/download)
-- Linux, Unix, or Mac OS X
-- [NodeJS](http://nodejs.org), or another JavaScript runtime (for
-  CoffeeScript support).
+- [PHP 5.3 or Higher](http://php.net/)
+- [MySQL v5.5](http://dev.mysql.com/downloads/)
 
-<div class="note info">
-  <h5>Running Jekyll on Windows</h5>
-  <p>
-    While Windows is not officially supported, it is possible to get it running
-    on Windows. Special instructions can be found on our
-    <a href="../windows/#installation">Windows-specific docs page</a>.
-  </p>
+
+### Installation
+
+- Download the latest release from [GitHub](https://github.com/thilinah/icehrm/releases/latest)
+
+- Copy the downloaded file to the path you want to install iCE Hrm in your server and extract.
+
+- Create a mysql DB for and user. Grant all on iCE Hrm DB to new DB user.
+
+- Visit iCE Hrm installation path in your browser.
+
+- During the installation form, fill in details appropriately.
+
+- Once the application is installed use the username = admin and password = admin to login to your system.
+
+<div class="note warning">
+  <h5>Remove "install" folder</h5>
+  <p>Please rename or delete the install folder (<ice hrm root>/app/install) since it could pose a security threat to your iCE Hrm instance.</p>
 </div>
-
-## Install with RubyGems
-
-The best way to install Jekyll is via
-[RubyGems](http://rubygems.org/pages/download). At the terminal prompt,
-simply run the following command to install Jekyll:
-
-{% highlight bash %}
-$ gem install jekyll
-{% endhighlight %}
-
-All of Jekyll’s gem dependencies are automatically installed by the above
-command, so you won’t have to worry about them at all. If you have problems
-installing Jekyll, check out the [troubleshooting](../troubleshooting/) page or
-[report an issue]({{ site.repository }}/issues/new) so the Jekyll
-community can improve the experience for everyone.
-
-<div class="note info">
-  <h5>Installing Xcode Command-Line Tools</h5>
-  <p>
-    If you run into issues installing Jekyll's dependencies which make use of
-    native extensions and are using Mac OS X, you will need to install Xcode
-    and the Command-Line Tools it ships with. Download in
-    <code>Preferences &#8594; Downloads &#8594; Components</code>.
-  </p>
-</div>
-
-## Pre-releases
-
-In order to install a pre-release, make sure you have all the requirements
-installed properly and run:
-
-{% highlight bash %}
-gem install jekyll --pre
-{% endhighlight %}
-
-This will install the latest pre-release. If you want a particular pre-release,
-use the `-v` switch to indicate the version you'd like to install:
-
-{% highlight bash %}
-gem install jekyll -v '2.0.0.alpha.1'
-{% endhighlight %}
-
-If you'd like to install a development version of Jekyll, the process is a bit
-more involved. This gives you the advantage of having the latest and greatest,
-but may be unstable.
-
-{% highlight bash %}
-$ git clone git://github.com/jekyll/jekyll.git
-$ cd jekyll
-$ script/bootstrap
-$ bundle exec rake build
-$ ls pkg/*.gem | head -n 1 | xargs gem install -l
-{% endhighlight %}
-
-## Optional Extras
-
-There are a number of (optional) extra features that Jekyll supports that you
-may want to install, depending on how you plan to use Jekyll. These extras
-include LaTeX support, and the use of alternative content rendering engines.
-Check out [the extras page](../extras/) for more information.
-
-<div class="note">
-  <h5>ProTip™: Enable Syntax Highlighting</h5>
-  <p>
-    If you’re the kind of person who is using Jekyll, then chances are you’ll
-    want to enable syntax highlighting using <a href="http://pygments.org/">Pygments</a>
-    or <a href="https://github.com/jayferd/rouge">Rouge</a>. You should really
-    <a href="../templates/#code-snippet-highlighting">check out how to
-    do that</a> before you go any farther.
-  </p>
-</div>
-
-Now that you’ve got everything installed, let’s get to work!
